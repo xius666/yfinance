@@ -140,15 +140,12 @@ def parse_quotes(data, tz=None):
 def parse_actions(data, tz=None):
     dividends = _pd.DataFrame(columns=["Dividends"])
     splits = _pd.DataFrame(columns=["Stock Splits"])
-    #print(data)
-    #print(list(data["events"]["splits"].values()))
     if "events" in data:
         if "dividends" in data["events"]:
             dividends = _pd.DataFrame(
                 data=list(data["events"]["dividends"].values()))
             
             dividends.set_index("date", inplace=True)
-            
             dividends.index = _pd.to_datetime(dividends.index, unit="s")
             dividends.sort_index(inplace=True)
             if tz is not None:
@@ -166,12 +163,7 @@ def parse_actions(data, tz=None):
             splits["Stock Splits"] = splits["numerator"] / \
                 splits["denominator"]
             splits = splits["Stock Splits"]
-
-
-    
-    #print(dividends.index[0])
-    #print(dividends.index[1])
-    #print(dividends,splits)   
+  
     return dividends, splits
 
 

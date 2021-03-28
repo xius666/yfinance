@@ -101,7 +101,7 @@ class Test_parse_action(unittest.TestCase):
 
     def test_wrongData(self):
         """
-        Test wring data
+        Test wrong data
         """
         
         result = utils.parse_actions(data6)

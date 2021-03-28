@@ -6,7 +6,7 @@ Tester Name: Ruochen Lin
 
 Date(s) of Test:2021/03/24
 
-test case number:2
+test case number:3
 
 Description: test the function of parsing the date and time correctly in the parse_actions in utils.py
 
@@ -76,3 +76,21 @@ Columns: [Dividends]
 Index: [], Empty DataFrame
 Columns: [Stock Splits]
 Index: [])
+
+Input3:
+Ticker ‘APPL’ Data that contains date and time info.
+
+input is data6='meta': {'currency': 'USD', 'symbol': 'AAPL', 'exchangeName': 'NMS', 'instrumentType': 'EQUITY', 'firstTradeDate': 345479400, 'regularMarketTime': 1616616002, 'gmtoffset': -14400, 'timezone': 'EDT', 'exchangeTimezoneName': 'America/New_York', 'regularMarketPrice': 120.09, 'chartPreviousClose': 108.22, 'priceHint': 2, 'currentTradingPeriod': {'pre': {'timezone': 'EDT', 'start': 1616659200, 'end': 1616679000, 'gmtoffset': -14400}, 'regular': {'timezone': 'EDT', 'start': 1616679000, 'end': 1616702400, 'gmtoffset': -14400}, 'post': {'timezone': 'EDT', 'start': 1616702400, 'end': 1616716800, 'gmtoffset': -14400}}, 'dataGranularity': '1d', 'range': '6mo', 'validRanges': ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max']}, 'events': {'dividends': {'1604673000': {'amount': 0.205, 'date': 0}, '1612535400': {'amount': 0.205, 'date': 0}}}}
+
+Expected output3:
+expected a Dataframe object with correct dates as index and corresponding the time of 1970 feb 8 the date that electronic stock market was created
+screen print the expected dataframe:
+
+date                          
+1970-02-08 07:00:00
+
+Actual output3:
+The test passed and the date frame returned are accurate as expected.
+screen print the output dataframe:
+date                          
+1970-02-08 07:00:00

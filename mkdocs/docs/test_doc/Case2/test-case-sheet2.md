@@ -23,3 +23,9 @@ Empty input with ''
 
 Expected output:
 Return two empty Dataframe
+
+Input:
+Empty input with actual "APPL" data with inaccurate date and time
+
+Expected output:
+Return accurate date and time as expected

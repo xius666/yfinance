@@ -147,10 +147,8 @@ def parse_actions(data, tz=None):
                 data=list(data["events"]["dividends"].values()))
             
             dividends.set_index("date", inplace=True)
-            #print(dividends.index[0])
-            if dividends.index[0] < 3308400:
+            if dividends.index[0] < 3308400:#when date is before the date of the opening of the stock market 
                 dividends.index.values[0] = 3308400
-            #print(dividends.index[0])
             dividends.index = _pd.to_datetime(dividends.index, unit="s")
             
             

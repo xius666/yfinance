@@ -26,7 +26,7 @@ This test plan is to test the function of parse_action  with different ticker da
 **2 Problem found in Research phase**
 
 ```
-No problem has been found
+date & time error when date input is before the date of electronic stock market was created
 ```
 
 **3 Risks**
@@ -78,7 +78,7 @@ Mitigation Plan: Correct time by adding get current dataTime function to compare
 
 ```
 
-- test if the returned dataframe is empty
+- test if the returned dataframe is empty dataframe
 
 ```
 
@@ -91,7 +91,7 @@ Mitigation Plan: Correct time by adding get current dataTime function to compare
 - test if the returned splits dataframe is empty
 - test if the dataframe returned matches with expected dataframe
 - test if the date and time dataframe returned matches expected dataframe
-- test if the empty data and time dataframe reutrned matched expected dataframe
+- test if the empty data and time dataframe reuturned matched expected dataframe
 
 ```
 
@@ -99,12 +99,18 @@ Mitigation Plan: Correct time by adding get current dataTime function to compare
 
 ```
 
-- test if the returned dataseries is None
+- test if the returned dataframe is None
 - test if the returned dataframe contains splits
 - test if the returned dataframe does not contain dividends
 - test if the returned dataseries matches the expected output listed
 - test if the date and timne dataframe returned matches expected dataframe
-- test if the empty data and time dataframe reutrned matched expected dataframe
+- test if the empty data and time dataframe reuturned matched expected dataframe
+
+```
+4.test when the date passed in is invalid
+```
+
+- test if the returned dataframe has the correct date replacing the invalid date
 
   4.2 Test approach:
 

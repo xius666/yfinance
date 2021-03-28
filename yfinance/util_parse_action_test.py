@@ -1,5 +1,5 @@
-import utils
 import unittest
+import utils
 import datetime
 import pandas as pd
 import numpy as np

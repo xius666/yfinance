@@ -21,9 +21,7 @@ This test plan is to test the function of parse_action  with different ticker da
 * Shiyu Xiu - Unit Testing the parse_actions for dividend case
 * Luke Kim - Unit Testing the parse_actions for split case
 * Ruochen Lin - Unit Testing the parse_actions for date & time match correct and empty input
-* Sanae Mayer
-* Alexander Chan
-* Jamie Powers
+
 ```
 
 **2 Problem found in Research phase**
@@ -129,9 +127,5 @@ Mitigation Plan: Correct time by adding get current dataTime function to compare
 MacOs Big Sur 11.2.
 Windows 10 Home 64-bit
 Python 3.9.2 64 bit version
-
-```
-
-```
 
 ```
